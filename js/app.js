@@ -183,7 +183,7 @@ function nav(path) {
     <a class="nav-link" href="${UI.contact_link}" target="_blank">${UI.nav_link_4}</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://www.buymeacoffee.com/rinzry" target="_blank">Donate</a>
+    <a class="nav-link" href="https://ko-fi.com/rinzry" target="_blank">Donate</a>
   </li>`;
 
     var search_text = model.is_search_page ? (model.q || '') : '';
