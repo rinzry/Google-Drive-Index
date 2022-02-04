@@ -1147,6 +1147,10 @@ function file_video(path) {
    const player = new Plyr('#vplayer',{ratio: "${
      UI.plyr_io_video_resolution
    }"});
+   const vid = document.getElementById('vplayer');
+    vid.addEventListener('error', function() {
+      alert("Google Drive Quota Exceeded. Please Try Again in an hour or two.");
+    });
   </script></br>
 ${
   UI.disable_video_download
