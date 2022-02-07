@@ -480,9 +480,7 @@ function append_files_to_list(path, files) {
 
   html = "";
   let targetFiles = [];
-  for (i in files.sort(function (a, b) {
-    return natsort()(a.name, b.name);
-  })) {
+  for (i in files) {
     var item = files[i];
     var ep = item.name + "/";
     var p =
