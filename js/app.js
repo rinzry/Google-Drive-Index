@@ -480,7 +480,9 @@ function append_files_to_list(path, files) {
 
   html = "";
   let targetFiles = [];
-  for (i in files) {
+  for (i in files.sort(function (a, b) {
+    return natsort()(a.name, b.name);
+  })) {
     var item = files[i];
     var ep = item.name + "/";
     var p =
@@ -764,9 +766,7 @@ function append_search_result_to_list(files) {
 
   html = "";
 
-  for (i in files.sort(function (a, b) {
-    return natsort()(a.name, b.name);
-  })) {
+  for (i in files) {
     var item = files[i];
     var p = "/" + cur + ":/" + item.name + "/";
     if (item["size"] == undefined) {
