@@ -181,7 +181,7 @@ function nav(path) {
   var html = "";
   var cur = window.current_drive_order || 0;
   if (localStorage.getItem("acknowledged") === null)
-    html += `<div class="alert"> <span class="closebtn" onclick="this.parentElement.style.display='none';window.localStorage.setItem("acknowledged", true);">&times;</span> Content is still copying over to the new drive. Please be patient over the next couple of days. </div>`;
+    html += `<div class="alert"> <span class="closebtn" onclick="this.parentElement.style.display='none';window.localStorage.setItem('acknowledged', true);">&times;</span> Content is still copying over to the new drive. Please be patient over the next couple of days. </div>`;
   html += `<nav class="navbar navbar-expand-lg${
     UI.fixed_header ? " fixed-top" : ""
   } ${UI.header_style_class}">
